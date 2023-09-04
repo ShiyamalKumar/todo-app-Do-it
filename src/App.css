@@ -1,18 +1,25 @@
+
 .App {
   text-align: center;
 }
+body {
+  height: 100%;
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+  background-position: bottom;
+  background-size:cover;
+  background-repeat: no-repeat;
+  /* filter: brightness(0.5); */
+  backdrop-filter:brightness(0.5);
+}
 
-
-body, h1, h2, ul, li, p {
+h1, h2, ul, li, p {
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  background-image: url(./assets/pink-324175_1920.jpg);
-}
 
 .container {
   max-width: 800px;
@@ -39,22 +46,180 @@ nav ul li {
   margin-right: 10px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
 
-button {
-  background-color: #333;
+nav ul li a{
   color: white;
-  border: none;
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-button:hover {
-  background-color: #555;
+nav ul li a:hover {
+  background-color: #fff;
+  color:#3c9cd8;}
+
+nav ul li a:active {
+  background-color: #3c9cd8;
+}
+
+nav ul li a:visited {
+  background-color: #fff;
+}
+
+.button-30 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #3c9cd8;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.button-30:hover
+{
+  background-color: #3c9cd8;
+  color: #f5f5fa;
+}
+
+.button-30:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-30 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.button-30-comp {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #3c9cd8;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left:20px;
+  
+}
+
+.button-30-comp:hover
+{
+  background-color: #28a336;
+  color: #f5f5fa;
+}
+
+.button-30-comp:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-30-comp {
+    padding: 0.25em 0.75em;
+  }
+}
+
+
+.button-30-delete {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #3c9cd8;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right:20px;
+  
+}
+
+.button-30-delete:hover
+{
+  background-color: #e20e0e;
+  color: #f5f5fa;
+}
+
+.button-30-delete:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-30-delete {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.button-30-edit {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #3c9cd8;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button-30-edit:hover
+{
+  background-color: #3c9cd8;
+  color: #f5f5fa;
+}
+
+.button-30-edit:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-30-edit {
+    padding: 0.25em 0.75em;
+  }
 }
 
 .task {
@@ -83,7 +248,7 @@ button:hover {
 .form-container {
   background-color: white;
   border: 1px solid #ccc;
-  padding: 20px;
+  
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

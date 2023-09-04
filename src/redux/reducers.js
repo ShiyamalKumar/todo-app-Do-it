@@ -1,16 +1,16 @@
 const initialState = {
     tasks: [
-        { task: "task 1", description: "e23", completed: false, createdDate: new Date("2023-09-13"), dueDate: new Date("2024-10-03"), priority: "HIGH" },
-        { task: "task 2", description: "e234", completed: false, createdDate: new Date("2023-10-13"), dueDate: new Date("2024-07-13"), priority: "LOW" },
-        { task: "task 3", description: "e235", completed: false, createdDate: new Date("2023-06-13"), dueDate: new Date("2024-10-03"), priority: "MEDIUM" },
-        { task: "task 4", description: "e2363", completed: false, createdDate: new Date("2023-10-23"), dueDate: new Date("2024-08-13"), priority: "LOW" }
+        // { id: 1, task: "task 1", description: "e23", completed: false, createdDate: new Date("2023-09-13"), dueDate: new Date("2024-10-03"), priority: "HIGH" },
+        // { id: 2, task: "task 2", description: "e234", completed: false, createdDate: new Date("2023-10-13"), dueDate: new Date("2024-07-13"), priority: "LOW" },
+        // { id: 3, task: "task 3", description: "e235", completed: false, createdDate: new Date("2023-06-13"), dueDate: new Date("2024-10-03"), priority: "MEDIUM" },
+        // { id: 4, task: "task 4", description: "e2363", completed: false, createdDate: new Date("2023-10-23"), dueDate: new Date("2024-08-13"), priority: "LOW" }
 
     ],
 };
 
 
 const rootReducer = (state = initialState, action) => {
-
+    console.log("Task ID: " + action.payload);
     switch (action.type) {
         case 'ADD_TASK':
             return {
