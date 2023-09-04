@@ -6,11 +6,13 @@ import store from './redux/store';
 import AllTask from './components/AllTask';
 import TaskPage from './components/TaskPage';
 import './styles.css';
+
 function App() {
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
+
           <h1>DO IT</h1>
           <nav>
             <ul>

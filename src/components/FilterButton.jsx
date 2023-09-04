@@ -3,7 +3,7 @@ import '../styles.css';
 
 const FilterButton = ({ types, activeFilter, setActiveFilter }) => {
     return (
-        <div>
+        <div className='filterbox'>
             <button
                 onClick={() => setActiveFilter(null)}
                 className={`button-54 ${activeFilter === null ? 'active' : ''}`}

@@ -29,8 +29,7 @@ const ALLTask = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // if (task.trim() && description.trim()) {
-        const data = { id: new Date().toDateString(), task, description, completed: false, createdDate: new Date(), dueDate: dateValue, priority }
-
+        const data = { id: new Date().toString(), task, description, completed: false, createdDate: new Date(), dueDate: dateValue, priority }
         dispatch(addTask(data));
         setTask('');
         setDescription('');
@@ -40,21 +39,23 @@ const ALLTask = () => {
         // }
     };
     return (
-        <div >
+        <div>
             <button className='addtaskbut' onClick={openModal}>Add Task</button>
-            <Modal isOpen={modalOpen} onClose={closeModal}>
-                <TaskForm handleSubmit={handleSubmit} task={task} setTask={setTask} description={description} setDescription={setDescription} dateValue={dateValue} setDateValue={setDateValue} setPriority={setPriority} />
-            </Modal>
-            <div style={{ marginTop: "1rem" }}>
-                {todoList?.map(({ completed, createdDate, description, dueDate, priority, task }, index) => <div key={index} style={{ display: "flex", backgroundColor: "white", justifyContent: "space-between", width: "50%", padding: "0.8rem 1.6rem", margin: "auto", marginTop: "0.5rem", borderRadius: "10px" }}>
-                    <div style={{ textAlign: "start" }}>
-                        <p style={{ fontSize: "1.4rem" }}> {task} </p>
-                        <p style={{ fontSize: "0.9rem" }}>{description}</p>
-                    </div>
-                    <div style={{ alignSelf: "end" }}>
-                        {dueDate != null ? <p>Due: {dueDate.toLocaleString()} </p> : null}
-                    </div>
-                </div>)}
+            <div className='scrollable-div'>
+                <Modal isOpen={modalOpen} onClose={closeModal}>
+                    <TaskForm handleSubmit={handleSubmit} task={task} setTask={setTask} description={description} setDescription={setDescription} dateValue={dateValue} setDateValue={setDateValue} setPriority={setPriority} />
+                </Modal>
+                <div style={{ marginTop: "1rem" }}>
+                    {todoList?.map(({ completed, createdDate, description, dueDate, priority, task }, index) => <div key={index} style={{ display: "flex", backgroundColor: "white", justifyContent: "space-between", width: "50%", padding: "0.8rem 1.6rem", margin: "auto", marginTop: "0.5rem", borderRadius: "10px" }}>
+                        <div style={{ textAlign: "start" }}>
+                            <p style={{ fontSize: "1.4rem" }}> {task} </p>
+                            <p style={{ fontSize: "0.9rem" }}>{description}</p>
+                        </div>
+                        <div style={{ alignSelf: "end" }}>
+                            {dueDate != null ? <p>Due: {dueDate.toDateString()} </p> : null}
+                        </div>
+                    </div>)}
+                </div>
             </div>
         </div>
     );

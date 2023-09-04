@@ -68,18 +68,22 @@
 }
 
 /* Modal Content */
-.modal-content {
-  background: transparent;
-  color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+.modal-content
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 50px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  color:#f5f5fa;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border-radius: 10px;
-  position: relative;
-  width: 400px;
-  max-width: 90%;
-  text-align: center;
 }
-.modal button {
+
+.modal-submit {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
@@ -95,23 +99,24 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-top:20px;
   
 }
 
-.modal button:hover
+.modal-submit:hover
 {
   background-color: #3c9cd8;
   color: #f5f5fa;
 }
 
-.modal button:active {
+.modal-submit:active {
   box-shadow: 0px 0px 0px 0px;
   top: 5px;
   left: 5px;
 }
 
 @media (min-width: 768px) {
-  .modal button {
+  .modal-submit {
     padding: 0.25em 0.75em;
   }
 }
@@ -131,20 +136,70 @@
   color: #e74c3c;
 }
 
-/* Modal Content Typography */
-.modal-content h2 {
-  margin: 0 0 20px;
-  color: #333;
-  font-size: 24px;
+
+
+.modal-content form .user-box
+{
+  padding:20px;
 }
 
-.modal-content p {
-  color: #555;
-  font-size: 16px;
-  margin-bottom: 20px;
+.modal-content form .user-box input
+{
+  padding:5px;
+  margin-left: 20px;
 }
 
-/* Beautiful Button Style */
+.modal-content form .user-box input{
+	position:relative;
+	margin-bottom:25px;
+}
+.modal-content form .user-box input label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+    pointer-event:none;
+	transition: all 0.5s ease-in-out;
+}
+.modal-content form .user-box input input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.modal-content form .user-box input input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+
+/* .taskin
+{
+margin-left: 20px;
+margin: -3px;
+}
+
+.descin
+{
+  padding:5px;
+  margin: -3px;
+}
+
+.modal-content form .user-box label
+{
+  padding:5px;
+  margin-right: 20px;
+}
+.react-datepicker__input-container
+{
+  margin-left: 30px;
+} */
+
+/* 
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -159,6 +214,5 @@
 
 .button:hover {
   background-color: #2980b9;
-}
+} */
 
-/* Optional: Add your own custom styles to children components here */

@@ -1,4 +1,7 @@
-
+.filterbox
+{
+  margin:20px;
+}
 .button-54 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -38,11 +41,11 @@
 
 h1
 {
-  color: #fdfdfe;
+  color: #A8C0FF;
   font-size: 70px;
   font-weight: 600;
-  text-shadow: 0px 0px 5px #3c9cd8, 0px 0px 10px #3c9cd8, 0px 0px 10px #3c9cd8,
-    0px 0px 20px #3c9cd8;
+  /* text-shadow: 0px 0px 5px #3c9cd8, 0px 0px 10px #3c9cd8, 0px 0px 10px #3c9cd8,
+    0px 0px 20px #3c9cd8; */
 }
 
 h2 {
