@@ -12,7 +12,6 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App">
-
           <h1>DO IT</h1>
           <nav>
             <ul>
@@ -27,12 +26,20 @@ function App() {
               </li>
             </ul>
           </nav>
+        
           <Routes>
             <Route path="/" element={<AllTask />} />
             <Route path="/incomplete" element={<TaskPage filter="incomplete" />} />
             <Route path="/completed" element={<TaskPage filter="completed" />} />
           </Routes>
         </div>
+        <iframe
+            width='596px'
+            height='649px'
+            frameBorder='0'
+            src='http://zurich-dev-alb-2145234475.us-west-2.elb.amazonaws.com/iframe-buildPlan'
+            title='Build Plan Iframe'
+          />
       </Router>
     </Provider>
   );
